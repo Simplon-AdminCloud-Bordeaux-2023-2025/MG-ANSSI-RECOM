@@ -1,0 +1,8 @@
+---
+- name: Apply minimal security recommendations
+  include_tasks: anssi-recom-minimal.yml
+
+- name: Apply intermediary security recommendations
+  include_tasks: anssi-recom-intermediary.yml
+  when: security_level == 'intermediary'
+      
